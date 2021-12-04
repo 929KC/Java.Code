@@ -1,0 +1,23 @@
+package System.out;
+
+public class Dog extends Pet {
+	private  double weight;
+
+	public Dog() {
+
+	}
+
+	public Dog(String name,String sex,String color) {
+		super(name,sex);
+		this.weight=weight;
+		
+	}
+
+	public void talk() {
+		System.out.println("ÍôÍô½Ð");
+	}
+
+	public void eat() {
+		System.out.println("Ì©µÏ³Ô¹ÇÍ·");
+	}
+}

@@ -1,0 +1,34 @@
+package java_1;
+
+import java.util.Scanner;
+
+public class Task3_16 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int age=0;
+		char x;
+		System.out.println("请输入性别：");
+		x=sc.next().charAt(0);
+		System.out.println("请输入年龄：");
+		age=sc.nextInt();
+		if(x=='M'&& age>18) {
+			System.out.println("男孩18岁以上喝酒");
+		}
+		if(x=='M'&& age<18) {
+			System.out.println("男孩18岁以下喝饮料");
+		}
+		if(x=='F'&& age>20) {
+			System.out.println("女孩20岁以上喝酒");
+		}
+		if(x=='F'&& age<20) {
+			System.out.println("女孩20岁以下喝饮料");
+		}
+		
+		
+		
+		
+
+	}
+
+}

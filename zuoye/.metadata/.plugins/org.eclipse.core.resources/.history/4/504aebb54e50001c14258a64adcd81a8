@@ -1,0 +1,10 @@
+package leibulei2;
+
+public class OuterDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

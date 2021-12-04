@@ -1,0 +1,30 @@
+package inthetouge03;
+
+import java.util.Scanner;
+
+public class Task1 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String dogName = sc.next();
+		String dogSex = sc.next();
+		String dogColor = sc.next();
+		String catName = sc.next();
+		String catSex = sc.next();
+		double catWeight = sc.nextDouble();
+		// 通过有参构造函数实例化Dog类对象dog
+		// dog调用talk()方法
+		// dog调用eat()方法
+		/********* begin *********/
+		
+		/********* end *********/
+		// 通过有参构造函数实例化Cat类对象cat
+		// cat调用talk()方法
+		// cat调用eat()方法
+		/********* begin *********/
+		
+		/********* end *********/
+
+	}
+
+}

@@ -1,0 +1,12 @@
+package leibulei6;
+
+public class SystemDemo {
+
+	public static void main(String[] args) {
+	 System.out.println("开始");
+	 //public static void exit(int staus):终止当前运行的JVM,非零 表示异常终止
+	 System.exit(0);
+	 System.out.println("结束");
+	}
+
+}

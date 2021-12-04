@@ -1,0 +1,20 @@
+package System.out;
+
+public class AdditionCalculator {
+
+	public static void main(String[] args) {
+		
+
+	}
+	public void addition(int a, int n) {
+		int k = 0,sum=0,t=a;
+		while(k<=n) {
+			t=t*10+a;
+			sum+=a;
+			k++;
+		}
+		System.out.println(sum);
+		
+	}
+	
+}

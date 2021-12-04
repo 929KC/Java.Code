@@ -1,0 +1,18 @@
+package leibulei6;
+
+public class ObjectDemo {
+
+	public static void main(String[] args) {
+	 Student s=new Student();
+	 s.setName("Ò¶Çïº­");
+	 s.setAge(19);
+	 System.out.println(s);//leibulei6.Student@15db9742
+	 System.out.println(s.toString());//leibulei6.Student@15db9742 
+     System.out.println("--------");
+     Student s2=new Student();
+     s2.setName("Ò¶×ÓÇï");
+     s2.setAge(18);
+     System.out.println(s.equals(s2));
+	}
+
+}

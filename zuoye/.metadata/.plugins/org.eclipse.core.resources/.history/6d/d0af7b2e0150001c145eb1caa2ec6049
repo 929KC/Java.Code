@@ -1,0 +1,11 @@
+package inthetouge_1;
+
+public class extendsTest {
+
+	public static void main(String[] args) {
+	Animal a=new Cat();
+  
+
+	}
+
+}

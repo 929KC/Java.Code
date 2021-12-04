@@ -1,0 +1,18 @@
+package java_1;
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		 System.out.print("姓名："); 
+         System.out.println("张三");
+     System.out.print("年龄："); 
+           System.out.print("25");
+     System.out.print("职业："); 
+           System.out.print("JAVA高级工程师");
+     System.out.print("薪资："); 
+     System.out.print("15K");
+     }
+
+	}
+
+

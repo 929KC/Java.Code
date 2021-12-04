@@ -1,0 +1,13 @@
+package leibulei6;
+
+import java.util.Arrays;
+
+public class ArraysDemo {
+
+	public static void main(String[] args) {
+	int []  arr= {12,23,56,78};
+     System.out.println("≈≈–Ú«∞£∫"+Arrays.toString(arr));
+     Arrays.parallelSort(arr);
+     System.out.println("≈≈–Ú∫Û£∫"+Arrays.toString(arr));
+  }
+}

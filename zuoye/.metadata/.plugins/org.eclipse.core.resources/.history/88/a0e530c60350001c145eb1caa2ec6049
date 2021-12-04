@@ -1,0 +1,10 @@
+package inthetouge_1;
+
+public class Test_super {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

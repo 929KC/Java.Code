@@ -1,0 +1,35 @@
+package inthetouge_1;
+
+public class Person1 {
+	private String name;
+	private int age;
+
+	public Person1() {
+
+	}
+
+	public Person1(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+
+	public void set(String name) {
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void set(int age) {
+		this.age = age;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void talk() {
+	   System.out.println("我是："+name+","+"今年："+age+"岁");
+   }
+}

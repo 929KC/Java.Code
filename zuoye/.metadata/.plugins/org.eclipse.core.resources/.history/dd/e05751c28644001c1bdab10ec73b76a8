@@ -1,0 +1,88 @@
+package intheheima5;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class StudentManager {
+         
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		ArrayList<Student> array=new ArrayList<Student>();
+	       while(true) {
+	    	   System.out.println("-------欢迎来到学生管理系统-------");
+		        System.out.println("1添加学生");
+		        System.out.println("2删除学生");
+		        System.out.println("3修改学生");
+		        System.out.println("4查看所有学生");
+		        System.out.println("5退出");
+		        System.out.println("请输入出你的选择");
+		        String  line=sc.nextLine();
+		        switch(line) {
+		        case "1":
+		        	System.out.println("添加学生");
+		        	break;
+		        case "2":
+		        	System.out.println("删除学生");
+		        	break;
+		        case "3":
+		        	System.out.println("修改学生");
+		        	break;
+		        case "4":
+		        	System.out.println("查看所有学生");
+		        	break;
+		        case "5":
+		        	System.out.println("谢谢使用");
+		        	System.exit(0);//JVM停止使用
+		        }
+	       }
+
+	}
+	  //定义一个方法，用于添加学生信息
+		public static void addStudent(ArrayList<Student> aray) {
+			Scanner sc=new Scanner(System.in);
+			ArrayList<Student> array=new ArrayList<>();
+			System.out.println("请输入你的学号");
+			String sid=sc.nextLine();
+			System.out.println("请输入你的姓名");
+			String name=sc.nextLine();
+			System.out.println("请输入你的年龄");
+			String age=sc.nextLine();
+			System.out.println("请输入你的居住地");
+			String address=sc.nextLine();
+			Student s1=new Student();
+			s1.setSid(sid);
+			s1.setName(name);
+			s1.setAddress(address);
+			array.add(s1);
+			System.out.println("添加学生");
+			
+		}
+	//定义一个方法，用于查看学生
+		public static void   findStudent(ArrayList<Student> array) {
+			//判断集合是否有数据,如果没有显示提示信息
+			if(array.size()==0) {
+				System.out.println("无信息，请先添加学生信息在查询");
+			}
+			
+			Student s2=new Student();
+			//显示表头信息
+			System.out.println("学号\t\t\t姓名\t\t年龄\t\t居住地");
+			//将集合中数据取出按照对应格式显示学生信息，年龄补充岁
+			for(int i=0; i<array.size(); i++) {
+				System.out.println(s2.getSid()+"\t"+s2.getAge()+"岁\t\t"+s2.getAddress());
+			}
+		}
+  //定义一个方法，用于删除学生
+		public static void deleteStudent(ArrayList<Student> array) {
+			Scanner sc=new Scanner(System.in);
+			System.out.println("请输入你要删除学生的学号");
+			String sid=sc.nextLine();
+			//遍历 集合将对应学生从对象中删除
+			for(int i=0; i<array.size(); i++) {
+				array.remove(i);
+				break;
+			}
+			System.out.println("删除学生成功");
+			
+		}
+}

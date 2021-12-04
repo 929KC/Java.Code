@@ -1,0 +1,15 @@
+package inthetouge_1;
+
+public class Student extends Person{
+    private String school="นþธฅด๓ัง";
+	
+	public Student() {
+    	
+    }
+    public Student(String name,int age) {
+    	super(name, age);
+    
+    }
+    
+	
+}

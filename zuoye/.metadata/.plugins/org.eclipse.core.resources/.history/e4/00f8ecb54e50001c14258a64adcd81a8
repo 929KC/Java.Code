@@ -1,0 +1,5 @@
+package leibulei;
+
+public class Outer {
+
+}
