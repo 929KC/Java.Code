@@ -16,8 +16,7 @@ public class ExtendsDemo2 {
     }
 }
 
-class People{
-    public void run(){
+class People{public void run(){
         System.out.println("可以跑~~");
     }
 }
