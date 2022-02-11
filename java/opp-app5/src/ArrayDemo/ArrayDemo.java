@@ -30,7 +30,7 @@ public class ArrayDemo {
 //            }
 //        });
 
-        Arrays.sort(arr4,( o1,  o2)-> -(o1-o2)  );
+        Arrays.sort(arr4,( o1, o2)-> -(o1-o2)  );
 
         System.out.println(Arrays.toString(arr4));
 
