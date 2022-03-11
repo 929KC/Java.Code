@@ -1,0 +1,17 @@
+package inthetouge_1;
+
+public class Cat extends Animal{
+        
+	public Cat() {
+		
+	}
+    public Cat(String name,int age) {
+		super(name,age);
+	}
+    public void voice() {
+    	System.out.println("´ó»¨Ã¨ß÷ß÷ß÷½Ð");
+    }
+    public void eat() {
+    	System.out.println("´ó»¨Ã¨³ÔÓã");
+    }
+}

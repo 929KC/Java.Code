@@ -1,0 +1,10 @@
+package inetheCsdn12_6;
+
+public class Pay {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

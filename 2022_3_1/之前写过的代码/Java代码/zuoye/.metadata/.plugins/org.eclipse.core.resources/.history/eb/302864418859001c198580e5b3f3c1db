@@ -1,0 +1,39 @@
+package intheÍ·¸ç12_10;
+
+import java.util.Scanner;
+
+public class Weekend {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("ÇëÊäÈëĞÇÆÚ£º");
+        String word = input.next();	
+        switch(word) {
+        case "Monday":
+        	System.out.println("Weekay");
+        	break;
+        case "Tuesday":
+        	System.out.println("Weekay");
+        	break;
+        case "Wednesday":
+        	System.out.println("Weekay");
+        	break;
+        case "Thursday":
+        	System.out.println("Weekay");
+        	break;
+        case "Friday":
+        	System.out.println("Weekay");
+        	break;
+        case "Staurday":
+        	System.out.println("Weekay");
+        	break;
+        case "Sunday":
+        	System.out.println("Weekay");
+        	break;
+        	default:
+        		System.out.println("ops");
+        }
+
+	}
+
+}

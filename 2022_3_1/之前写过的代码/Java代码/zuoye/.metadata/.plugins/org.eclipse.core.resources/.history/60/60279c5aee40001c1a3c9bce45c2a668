@@ -1,0 +1,25 @@
+package java_1;
+
+import java.util.Scanner;
+
+public class Demo_4 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int x,y;
+		System.out.println("请输入一个整数：");
+		x=sc.nextInt();
+		if(x>=0) {
+			if(x<=5) {
+				y=0;
+			}else {
+				y=x+3;
+			}
+		}else {
+			y=2*x+30;
+		}
+		
+		
+	}
+
+}

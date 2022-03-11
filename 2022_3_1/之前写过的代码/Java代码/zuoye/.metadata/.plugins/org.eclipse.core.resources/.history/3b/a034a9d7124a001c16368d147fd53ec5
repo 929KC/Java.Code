@@ -1,0 +1,20 @@
+package XunHuan;
+
+import java.util.Scanner;
+
+public class Task4_14 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("ÇëÊäÈëĞĞÊı£º");
+		int m=sc.nextInt();
+		for(int i=1; i<=m; i++) {
+			for(int k=1; k<=m; k++) {
+				System.out.print("*");
+			}
+			System.out.println("\t");
+		}
+
+	}
+
+}

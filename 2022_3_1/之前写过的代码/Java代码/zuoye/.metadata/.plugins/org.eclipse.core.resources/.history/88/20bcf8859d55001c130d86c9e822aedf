@@ -1,0 +1,18 @@
+package inthejava_12_5;
+
+import java.util.Scanner;
+
+public class Task6_6 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("请输入一个六位数：");
+		int i;
+	 int [] arr= {1,2,3,4,5,0};
+		for(i=arr.length; i>=0; i--) {
+			arr[arr.length]=arr[arr.length-1];
+		}
+		System.out.println(arr[arr.length]);
+	}
+
+}

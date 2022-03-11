@@ -1,0 +1,15 @@
+package intheÍ·¸ç12_10;
+
+import java.util.Scanner;
+
+public class Zodiac {
+
+	public static void main(String[] args) {
+		   Scanner input = new Scanner(System.in);
+	       sy
+		   int year = input.nextInt();
+	        
+
+	}
+
+}
