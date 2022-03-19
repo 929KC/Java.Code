@@ -1,4 +1,4 @@
-package q;
+package queue;
 
 /**
  * Created with IntelliJ IDEA.
