@@ -27,9 +27,11 @@ public class GamePanel extends JPanel implements KeyListener, ActionListener {
     int[] snackY = new int[500];
     String fx;
     boolean isStart = false;
+    boolean isFail = false;
     Timer time = new Timer(100, this);//单位毫秒
     int foodx;
     int foody;
+    int sorce;
     Random rand = new Random();
 
     public GamePanel() {
@@ -60,6 +62,7 @@ public class GamePanel extends JPanel implements KeyListener, ActionListener {
         fx = "R";
         foodx = 25 + 25 * rand.nextInt(34);
         foody = 75 + 25 * rand.nextInt(24);
+        sorce=0;
     }
 
     @Override
@@ -70,10 +73,15 @@ public class GamePanel extends JPanel implements KeyListener, ActionListener {
         this.setBackground(Color.WHITE);
         Data.header.paintIcon(this, g, 25, 11);//logo
         g.fillRect(25, 75, 850, 600);//游戏界面
+
+        //画积分
+        g.setColor(Color.white);
+        g.setFont(new Font("微软雅黑", Font.BOLD, 18));
+        g.drawString("长度："+length,750,35);
+        g.drawString("分数："+sorce,750,50);
+        //画食物
+        Data.food.paintIcon(this, g, foodx, foody);
         //画蛇
-        Data.right.paintIcon(this, g, snackX[0], snackY[0]);
-        Data.body.paintIcon(this, g, snackX[1], snackY[1]);
-        Data.body.paintIcon(this, g, snackX[2], snackY[2]);
         if (fx.equals("R")) {
             Data.right.paintIcon(this, g, snackX[0], snackY[0]);
         } else if (fx.equals("L")) {
@@ -94,7 +102,12 @@ public class GamePanel extends JPanel implements KeyListener, ActionListener {
             g.drawString("按下空格开始游戏", 300, 300);
         }
 
-        Data.food.paintIcon(this, g, foodx, foody);
+        if(isFail) {
+            g.setColor(Color.RED);
+            g.setFont(new Font("微软雅黑", Font.BOLD, 40));
+            g.drawString("失败，按下空格重新开始游戏", 300, 300);
+        }
+
     }
 
     @Override
@@ -106,15 +119,20 @@ public class GamePanel extends JPanel implements KeyListener, ActionListener {
     public void keyPressed(KeyEvent e) {//键盘按压响应
         int KeyCode = e.getKeyCode();//获得键盘的按键是哪一个
         if (KeyCode == KeyEvent.VK_SPACE) {
-            isStart = !isStart;
-            repaint();
+           if(isFail){
+               isFail=false;
+               init();;
+           }else{
+               isStart=!isStart;
+           }
+           repaint();
         }
 
         //小蛇移动
         if (KeyCode == KeyEvent.VK_UP) {
             fx = "U";
         } else if (KeyCode == KeyEvent.VK_LEFT) {
-            fx = "L";
+                fx = "L";
         } else if (KeyCode == KeyEvent.VK_RIGHT) {
             fx = "R";
         } else if (KeyCode == KeyEvent.VK_DOWN) {
@@ -129,9 +147,10 @@ public class GamePanel extends JPanel implements KeyListener, ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (isStart) {//如果游戏时开始状态,就让小蛇动
+        if (isStart&&isFail==false) {//如果游戏时开始状态,就让小蛇动
             if (snackX[0] == foodx && snackY[0] == foody) {
                 length++;
+                sorce+=10;
                 foodx = 25 + 25 * rand.nextInt(34);
                 foody = 75 + 25 * rand.nextInt(24);
             }
@@ -162,7 +181,12 @@ public class GamePanel extends JPanel implements KeyListener, ActionListener {
                     snackY[0] = 75;
                 }
             }
-
+        //判断失败,撞到自己
+            for (int i=1;i<length;i++){
+                if(snackX[0]==snackX[i]&&snackY[0]==snackY[i]){
+                    isStart=true;
+                }
+            }
             repaint();
         }
         time.start();
