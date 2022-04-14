@@ -5,7 +5,7 @@ package reflect;
  * Description:
  * truth:talk  is cheap, show me the code.
  *
- * @Author ：KC萧寒
+ * @author ：KC萧寒
  * Date: 2022-04-13
  * Time: 14:22
  */
@@ -19,6 +19,11 @@ public class Person {
     public Person() {
     }
 
+    /**
+     *
+     * @param name
+     * @param age
+     */
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
@@ -48,5 +53,18 @@ public class Person {
                 ", school='" + school + '\'' +
                 ", id=" + id +
                 '}';
+    }
+
+
+    public void  eat() {
+        System.out.println("吃饭~~~");
+    }
+
+    /**
+     *
+     * @param food
+     */
+    public void  eat(String food) {
+        System.out.println("吃饭~~~"+food);
     }
 }
