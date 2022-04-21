@@ -1,8 +1,7 @@
 package task1;
 
+import javax.swing.*;
 import java.awt.*;
-
-
 public class BasicComponentDemo {
     //定义一个窗口
     Frame frame = new Frame("测试基本组件");
@@ -12,7 +11,6 @@ public class BasicComponentDemo {
     CheckboxGroup cbg=new CheckboxGroup();
     //定义一个单选框
     Checkbox male=new Checkbox("男",cbg,true);
-
     Checkbox female=new Checkbox("女",cbg,false);
     //定义一个复选框，初始处于未被选中状态
     Checkbox married = new Checkbox("是否已婚？", false);
@@ -20,10 +18,8 @@ public class BasicComponentDemo {
     Choice colorChoser=new Choice();
     //定义一个列表选择框
     List colorList = new List(6, true);
-
     //定义一个5行，20列的多行文本域
     TextArea ta=new TextArea(5,20);
-
     //定义一个50列的单行文本域
     TextField tf=new TextField(50);
     public void init(){
@@ -47,9 +43,21 @@ public class BasicComponentDemo {
         p2.add(male);
         p2.add(female);
         p2.add(married);
+        //创建一个垂直排列的Box容器,装载多行文本和p 2
+        Box topLeft = Box.createVerticalBox();
+        topLeft.add(ta);
+        topLeft.add(p2);
+        //创建一个水平排列的Box,装载topleft和列表选项框
+        Box top= Box.createHorizontalBox();
+        top.add(topLeft);
+        top.add(colorList);
+        //将top添加到frame的中间区域
+        frame.add(top);
+        frame.pack();
+        frame.setVisible(true);
     }
     public static void main(String[] args) {
-
+        new  BasicComponentDemo().init();
 
     }
 
