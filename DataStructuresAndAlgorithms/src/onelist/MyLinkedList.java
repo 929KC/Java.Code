@@ -70,8 +70,9 @@ public class MyLinkedList {
             throw new RuntimeException("不合法");
         }
         Node cur = this.head;
-        while (index - 1 != 0) {
+        while (index -1!= 0) {
             cur = cur.next;
+            index--;
         }
         return cur;
     }
@@ -135,10 +136,11 @@ public class MyLinkedList {
                 cur = cur.next;
             }
         }
-        if(this.head.data==key){
-            this.head=this.head.next;
+        if (this.head.data == key) {
+            this.head = this.head.next;
         }
     }
+
     //得到单链表的长度
     public int size() {
         Node cur = this.head;
@@ -163,7 +165,7 @@ public class MyLinkedList {
      * 释放内存
      */
     public void clear() {
-    this.head=null;
+        this.head = null;
     }
 
 }

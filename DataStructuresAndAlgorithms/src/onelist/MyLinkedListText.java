@@ -17,7 +17,9 @@ public class MyLinkedListText {
         myList.addFirst(15);
         myList.addFirst(16);
         myList.display();
-
+        System.out.println(myList.contains(12));
+        myList.addIndex(3,23);
+        myList.display();
 
 
     }

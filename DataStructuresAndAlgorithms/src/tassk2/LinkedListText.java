@@ -1,7 +1,5 @@
 package tassk2;
 
-
-
 /**
  * truth:talk is cheap, show me the code
  *
@@ -34,8 +32,6 @@ public class LinkedListText {
         System.out.println();
         myList.clear();
         myList.display();
-
-
 
     }
 }
