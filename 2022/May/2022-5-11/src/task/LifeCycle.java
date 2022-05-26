@@ -17,8 +17,10 @@ public class LifeCycle {
         System.out.println(staticField);
         System.out.println("静态代码初始化");
     }
+
     //普通属性/成员属性
     private String field = getField();
+
     //普通方法块/实例代码块
     {
         System.out.println(field);
@@ -39,7 +41,6 @@ public class LifeCycle {
         String filed = "普通属性初始化";
         return filed;
     }
-
 
     public static void main(String[] argc) {
         new LifeCycle();

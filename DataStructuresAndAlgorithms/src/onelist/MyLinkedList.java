@@ -23,7 +23,7 @@ public class MyLinkedList {
     //头插法
     public void addFirst(int data) {
         Node node = new Node(data);
-        if (node == null) {
+        if (this.head == null) {
             this.head = node;
             return;
         }

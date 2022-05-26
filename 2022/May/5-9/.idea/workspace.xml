@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8d0b89af-cffc-4fd3-ba39-cf2549558a7b" name="Default Changelist" comment="" />
+    <list default="true" id="8d0b89af-cffc-4fd3-ba39-cf2549558a7b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../2022-5-11/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../2022-5-11/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2022-5-11/out/production/2022-5-11/task/LifeCycle.class" beforeDir="false" afterPath="$PROJECT_DIR$/../2022-5-11/out/production/2022-5-11/task/LifeCycle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2022-5-11/out/production/2022-5-11/task/Outer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../2022-5-11/out/production/2022-5-11/task/Outer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2022-5-11/src/task/LifeCycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2022-5-11/src/task/LifeCycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2022-5-11/src/task/Outer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2022-5-11/src/task/Outer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5-12/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../5-12/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5-13/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../5-13/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../5-16/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../5-16/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/src/Demo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../HomeWork/src/com/bit/task1/task2/Demo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../HomeWork/src/task/dfsDemo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../HomeWork/src/task/dfsDemo1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../HomeWork/src/task1/Demo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../HomeWork/src/task1/Demo1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../HomeWork/src/task3/Demo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../HomeWork/src/task3/Demo2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../HomeWork/src/task3/Demo5.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../HomeWork/src/task3/Demo5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../HomeWork/src/task3/Demo6.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../HomeWork/src/task3/Demo6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../HomeWork/src/task3/Demo7.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../HomeWork/src/task3/Demo7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../HomeWork/src/task3/Demo8.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../HomeWork/src/task3/Demo8.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,17 +80,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.StudentText" />
@@ -91,6 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1652051625108</updated>
       <workItem from="1652051626951" duration="7818000" />
+      <workItem from="1652794199609" duration="49000" />
     </task>
     <servers />
   </component>

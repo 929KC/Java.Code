@@ -15,7 +15,7 @@ public class Outer {
 
     public void methodA() {
         Outer.Inner in=new Outer().new Inner();
-        in.name="黄茂荣";
+        in.name="黄老邪";
         System.out.println(in.name);
         a = 99;
         System.out.println(a);
