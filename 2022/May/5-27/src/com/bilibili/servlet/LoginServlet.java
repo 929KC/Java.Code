@@ -20,7 +20,8 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         response.setContentType("html/text");
-         response.getWriter().write("hello");
-        System.out.println("hello");
+         PrintWriter writer = response.getWriter();
+         writer.println("登录成功");
+        writer.println("<h1>hello world</h1>");
     }
 }
