@@ -18,7 +18,7 @@ public class DBUtil {
     //文件资源绑定器
     private static ResourceBundle bundle = ResourceBundle.getBundle("resources:jdbc");
     //根据配置文件key获取value
-    private  static final String diever=bundle.getString("driver");
+    private  static final String driver=bundle.getString("driver");
     private static final  String url=bundle.getString("url");
     private static final String user=bundle.getString("user");
     private static final String passWord=bundle.getString("password");
@@ -26,7 +26,7 @@ public class DBUtil {
     static{
         //注册驱动(注册驱动只需要注册一次)
         try {
-            Class.forName(diever);
+            Class.forName(driver);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -49,9 +49,9 @@ public class DBUtil {
      * @param rs 结果集对象
      */
     public static  void close(Connection conn, Statement ps, ResultSet rs)  {
-        if(rs!=null){
+        if(conn!=null){
             try {
-                rs.close();
+                conn.close();
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }

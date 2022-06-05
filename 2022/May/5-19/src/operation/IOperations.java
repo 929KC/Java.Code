@@ -1,6 +1,6 @@
 package operation;
 
-import bookList.BookList;
+import booklist.BookList;
 
 public interface IOperations {
     void work(BookList list);
