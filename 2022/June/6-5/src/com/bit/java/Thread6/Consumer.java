@@ -15,17 +15,16 @@ import java.util.List;
  */
 public class Consumer implements Runnable{
     private List list;
-
     public Consumer(List list) {
         this.list = list;
     }
 
     @Override
     public void run() {
+
     while (true){
        synchronized (list){
            if(list.size()==0){
-
                try {
                    list.wait();
                } catch (InterruptedException e) {
@@ -33,7 +32,7 @@ public class Consumer implements Runnable{
                }
            }else{
               String str= (String) list.remove(0);
-               System.out.println(Thread.currentThread().getName()+"--->"+str);
+               System.out.println(Thread.currentThread().getName()+"--->"+str+"消费了");
                list.notify();
            }
        }

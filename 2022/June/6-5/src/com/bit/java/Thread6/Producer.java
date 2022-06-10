@@ -15,7 +15,6 @@ import java.util.List;
  */
 public class Producer implements Runnable {
     private List list;
-
     public Producer(List list) {
         this.list = list;
     }
@@ -34,7 +33,7 @@ public class Producer implements Runnable {
                   String pro="苹果";
                   list.add(pro);
                   list.notify();
-                  System.out.println(Thread.currentThread().getName()+"-->"+pro);
+                  System.out.println(Thread.currentThread().getName()+"-->"+pro+"生产了");
               }
           }
         }
