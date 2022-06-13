@@ -3,15 +3,17 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+
     <!--引入外部配置文件 -->
     <properties resource="db.properties"/>
-    <!--标准的日志工厂实现 -->
+<!--    日志工厂以及-->
     <settings>
-        <setting name="logImpl" value="LOG4J"/>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
-    <!--给javabean起别名 -->
+<!--   起别名-->
     <typeAliases>
-        <typeAlias type="com.bit.bean.User" alias="user"/>
+        <package name="com.bir.bean/Blog"/>
     </typeAliases>
     <!--环境配置 -->
     <environments default="development">
@@ -26,8 +28,6 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="com/bit/dao/UserMapper.xml"/>
-<!--        <mapper class="com.bit.dao.UserDao"/>-->
-<!--        <package name="com.bit.dao"/>-->
+        <mapper class="com.bit.dao.UserMapper"/>
     </mappers>
 </configuration>

@@ -4,6 +4,11 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--绑定接口 命名空间-->
 <mapper namespace="com.bit.dao.UserDao">
+<!-- 分页   -->
+    <select id="getUserByLimit" parameterType="map" resultType="user">
+        select *from mybatis.user limit #{startIndex},#{pageSize}
+    </select>
+
     <select id="getUserList" resultType="com.bit.bean.User">
        select *from mybatis.user
     </select>
@@ -19,4 +24,5 @@
     <delete id="deleteUser" parameterType="int">
         delete from mybatis.user where id=#{id};
     </delete>
+
 </mapper>

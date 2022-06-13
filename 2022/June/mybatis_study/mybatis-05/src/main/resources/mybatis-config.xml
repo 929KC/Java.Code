@@ -6,9 +6,9 @@
     <!--引入外部配置文件 -->
     <properties resource="db.properties"/>
     <!--标准的日志工厂实现 -->
-    <settings>
-        <setting name="logImpl" value="LOG4J"/>
-    </settings>
+<!--    <settings>-->
+<!--        <setting name="logImpl" value="STDOUT_LOGGING"/>-->
+<!--    </settings>-->
     <!--给javabean起别名 -->
     <typeAliases>
         <typeAlias type="com.bit.bean.User" alias="user"/>
@@ -26,8 +26,6 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="com/bit/dao/UserMapper.xml"/>
-<!--        <mapper class="com.bit.dao.UserDao"/>-->
-<!--        <package name="com.bit.dao"/>-->
+      <mapper class="com.bit.dao.UserMapper"/>
     </mappers>
 </configuration>

@@ -5,7 +5,9 @@ import com.bit.utils.MybatisUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * truth:talk is cheap, show me the code
@@ -67,4 +69,17 @@ public class UaerDaoTest {
         sqlSession.commit();
         sqlSession.close();
     }
+    @Test
+    public void getUserByLimit(){
+        SqlSession sqlSession = MybatisUtils.getSqlSession();
+        UserDao mapper = sqlSession.getMapper(UserDao.class);
+        Map<String,Integer> map = new HashMap<String,Integer>();
+          map.put("startIndex",0);
+          map.put("pageSize",1);
+       List<User> userList= mapper.getUserByLimit(map);
+        for (User user : userList) {
+            System.out.println(user);
+        }
+    }
+
 }
