@@ -10,6 +10,7 @@
     <settings>
         <setting name="logImpl" value="STDOUT_LOGGING"/>
         <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="cacheEnabled" value="true"/>
     </settings>
 <!--   起别名-->
     <typeAliases>

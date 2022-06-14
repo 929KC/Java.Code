@@ -5,6 +5,8 @@ import com.bit.utils.MybatisUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
+import java.sql.SQLException;
+
 /**
  * truth:talk is cheap, show me the code
  *
@@ -18,13 +20,15 @@ public class UserTest {
     public void queryUserById(){
         SqlSession sqlSession = MybatisUtils.getSqlSession();
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-          //一级缓存验证
+        //一级缓存验证
         User user=mapper.queryUserById(5);
         System.out.println(user);
-        System.out.println("=========");
-        User user2=mapper.queryUserById(5);
-        System.out.println(user2);
-        System.out.println(user==user2);
         sqlSession.close();
+        SqlSession sqlSession1 = MybatisUtils.getSqlSession();
+        UserMapper mapper1 = sqlSession1.getMapper(UserMapper.class);
+        User user2 = mapper1.queryUserById(5);
+        System.out.println(user2);
+        System.out.println(user == user2);
+        sqlSession1.close();
     }
 }
