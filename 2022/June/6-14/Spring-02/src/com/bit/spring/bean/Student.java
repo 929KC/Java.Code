@@ -36,14 +36,14 @@ public class Student {
         this.list = list;
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "course=" + Arrays.toString(course) +
-                ", list=" + list +
-                ", map=" + map +
-                ", set=" + set +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Student{" +
+//                "course=" + Arrays.toString(course) +
+//                ", list=" + list +
+//                ", map=" + map +
+//                ", set=" + set +
+//                '}';
+//    }
 }
 

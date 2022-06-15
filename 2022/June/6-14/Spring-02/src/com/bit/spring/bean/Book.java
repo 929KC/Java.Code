@@ -1,8 +1,5 @@
 package com.bit.spring.bean;
 
-import org.springframework.context.ApplicationContext;
-
-import java.util.ArrayList;
 import java.util.List;
 
 /**
