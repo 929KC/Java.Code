@@ -8,20 +8,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  * @author KC萧寒
  * @description
- * @createDate: 2022-06-16 17:51
+ * @createDate: 2022-06-17 09:24
  */
 @Controller
-public class HelloController {
 
+public class HelloController {
     @RequestMapping("/")
     public String index (){
-        //返回视图名称
         return "index";
     }
-
     @RequestMapping("/target")
     public  String toTarget(){
         return "target";
     }
-
 }
