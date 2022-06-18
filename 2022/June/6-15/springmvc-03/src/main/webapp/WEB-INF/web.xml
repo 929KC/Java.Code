@@ -32,7 +32,7 @@
     <filter>
         <filter-name>CharacterEncodingFilter</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
-       <!--请求乱码-->
+        <!--请求乱码-->
         <init-param>
             <param-name>encoding</param-name>
             <param-value>UTF-8</param-value>
