@@ -25,10 +25,10 @@ public class ScopeController {
         return "success";
     }
 
-    @RequestMapping("/")
-    public String index() {
-        return "index";
-    }
+//    @RequestMapping("/")
+//    public String index() {
+//        return "index";
+//    }
 
     @RequestMapping("/testModeAndView")
     public ModelAndView getValue() {

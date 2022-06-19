@@ -13,6 +13,10 @@
         <module>springmvc-2</module>
         <module>springmvc-03</module>
         <module>springmvc-03</module>
+        <module>springmvc-05</module>
+        <module>springmvc-06</module>
+        <module>springmc-07</module>
+        <module>springmvc-08</module>
     </modules>
 
     <properties>
@@ -44,5 +48,18 @@
             <artifactId>thymeleaf-spring5</artifactId>
             <version>3.0.12.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.12.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.3.1</version>
+        </dependency>
     </dependencies>
+
+
 </project>
