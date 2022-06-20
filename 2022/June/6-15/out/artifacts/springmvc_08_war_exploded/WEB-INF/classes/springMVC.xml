@@ -36,12 +36,30 @@
 <!--发起请求前拦截-->
     <mvc:interceptors>
 <!--        <bean class="com.bit.mvc.interceptor.FirstInterceptor"></bean>-->
-<!--   <ref bean="firstInterceptor"></ref>-->
-      <mvc:interceptor>
-          <mvc:mapping path="/**/"/>
-<!-- 除了首页以外的页面都拦截            -->
-          <mvc:exclude-mapping path="/"/>
-          <ref bean="firstInterceptor"></ref>
-      </mvc:interceptor>
+        <ref bean="firstInterceptor"></ref>
+<!--      <mvc:interceptor>-->
+<!--           -->
+<!--&lt;!&ndash;          <mvc:mapping path="/**/"/>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash; 除了首页以外的页面都拦截            &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;          <mvc:exclude-mapping path="/"/>&ndash;&gt;-->
+<!--&lt;!&ndash;          <ref bean="firstInterceptor"></ref>&ndash;&gt;-->
+<!--      </mvc:interceptor>-->
     </mvc:interceptors>
+<!--异常拦截器-->
+<!--    <bean-->
+<!--            class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">-->
+<!--        <property name="exceptionMappings">-->
+<!--            <props>-->
+<!--                &lt;!&ndash;-->
+<!--                properties的键表示处理器方法执行过程中出现的异常-->
+<!--                properties的值表示若出现指定异常时，设置一个新的视图名称，跳转到指定页面-->
+<!--                &ndash;&gt;-->
+<!--                <prop key="java.lang.ArithmeticException">error</prop>-->
+<!--            </props>-->
+<!--        </property>-->
+<!--        &lt;!&ndash;-->
+<!--        exceptionAttribute属性设置一个属性名，将出现的异常信息在请求域中进行共享-->
+<!--        &ndash;&gt;-->
+<!--        <property name="exceptionAttribute" value="ex"></property>-->
+<!--    </bean>-->
 </beans>
