@@ -1,5 +1,7 @@
 package com.bit.boot.controller;
 
+import com.bit.boot.bean.Car;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -8,12 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * @author KC萧寒
  * @description
- * @createDate: 2022-06-21 09:43
+ * @createDate: 2022-06-25 21:34
  */
 @RestController
-public class TestBootController {
-    @RequestMapping("/Hello")
-    public String testHello(){
-        return "HelloWorld,Boot,我是黄茂荣";
+public class CatController {
+    @Autowired
+    Car car;
+    @RequestMapping("/car")
+    public Car car(){
+        return car;
     }
 }

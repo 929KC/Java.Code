@@ -1,12 +1,14 @@
 package com.bit.boot.config;
 
+import com.bit.boot.bean.Car;
 import com.bit.boot.bean.CatPet;
 import com.bit.boot.bean.Student;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-import org.springframework.context.annotation.ImportResource;
+
 
 
 /**
@@ -22,6 +24,8 @@ import org.springframework.context.annotation.ImportResource;
 //@ConditionalOnBean(name = "cat")当容器中中拍配置一下(类中)
 //@CnditionalOnMissing反
 //@ImportResource("classpath.beans.xml")//引入外部资源
+@EnableConfigurationProperties(Car.class)
+//1.开启配置绑定功能2.将Car注入到容器中
 public class MyConfig {
     //向容器中添加组件,该默认该方法名为组件的id,即组件在容器中的标识,返回值则为容器中的实例
 
