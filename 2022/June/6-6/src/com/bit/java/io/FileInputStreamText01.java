@@ -29,7 +29,7 @@ public class FileInputStreamText01 {
 //            }
             int read=0;
             while((read=f.read())!=-1){
-                System.out.print(read);
+                System.out.print(read+" ");
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
