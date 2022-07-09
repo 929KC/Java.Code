@@ -6,7 +6,7 @@ import java.util.LinkedList;
 /**
  * 最小栈
  */
-class MinStack {
+public class MinStack {
     private Deque<Integer> dataStack;
     private Deque<Integer> minStack;
 

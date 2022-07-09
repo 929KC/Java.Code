@@ -1,5 +1,6 @@
 package com.bit.stack;
 
+import com.bit.queue.MinStack;
 import org.junit.Test;
 
 /**

@@ -2,6 +2,9 @@ package com.bit.queue;
 
 import java.util.Stack;
 
+/**
+ * 两个栈实现队列
+ */
 class MyQueue {
     Stack<Integer> s1;
     Stack<Integer> s2;
