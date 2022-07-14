@@ -34,5 +34,10 @@ public class TreeTest {
         System.out.println("获取第k层节点的个数:"+bt.getKLevelNodeCount(root,3));
         System.out.println("树的高度:"+bt.getHeight(root));
         System.out.println("查找元素:"+bt.find(root,'D').val);
+        System.out.print("层序遍历:");
+        bt.levelOrder(root);
+        System.out.println();
+        System.out.print("判断是否为完全二叉树:");
+        System.out.println(bt.isCompleteTree(root));
     }
 }

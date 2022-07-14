@@ -1,5 +1,8 @@
 package com.bit.tree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinaryTree {
  
     static class TreeNode {
@@ -11,8 +14,7 @@ public class BinaryTree {
             this.val = val;
         }
     }
- 
- 
+
     /**
      * 创建一棵二叉树 返回这棵树的根节点
      *
@@ -26,12 +28,12 @@ public class BinaryTree {
         TreeNode E=new TreeNode('E');
         TreeNode F=new TreeNode('F');
         TreeNode G=new TreeNode('G');
-        TreeNode H=new TreeNode('H');
+       // TreeNode H=new TreeNode('H');
         A.left=B;
         A.right=C;
         B.left=D;
         B.right=E;
-        E.right=H;
+        //E.right=H;
         C.left=F;
         C.right=G;
         return A;
@@ -172,12 +174,48 @@ public class BinaryTree {
  
     //层序遍历
     void levelOrder(TreeNode root) {
-        
+        if(root==null){
+            return ;
+        }
+        Queue<TreeNode> queue=new LinkedList<>();
+        queue.offer(root);
+        while(!queue.isEmpty()){
+            TreeNode cur=queue.poll();
+            System.out.print(cur.val+" ");
+            if(cur.left!=null){
+                queue.offer(cur.left);
+            }
+            if(cur.right!=null){
+                queue.offer(cur.right);
+            }
+        }
     }
  
  
     // 判断一棵树是不是完全二叉树
     boolean isCompleteTree(TreeNode root) {
+        if(root==null){
+            return true;
+        }
+        Queue<TreeNode> queue=new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()){
+            TreeNode cur=queue.poll();
+            if(cur!=null){
+                queue.offer(cur.left);
+                queue.offer(cur.right);
+            }else{
+                break;
+            }
+        }
+        while(!queue.isEmpty()){
+            TreeNode cur=queue.peek();
+            if(cur!=null){
+                return false;
+            }else{
+                queue.poll();
+            }
+        }
         return true;
     }
 }

@@ -2,8 +2,7 @@ package com.bit.lc;
 
 import org.junit.Test;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * truth:talk is cheap, show me the code
@@ -55,6 +54,12 @@ public class LcTest {
         System.out.println(" ");
         System.out.println(o2);
         System.out.println(14^3);
-
+    }
+    @Test
+    public void test2(){
+        List<Integer> list=new ArrayList<Integer>();
+        list.add(0,1);
+        list.add(0,2);
+        System.out.println(list);
     }
 }
