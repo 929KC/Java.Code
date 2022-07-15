@@ -25,17 +25,17 @@ public class BinaryTree {
         TreeNode B=new TreeNode('B');
         TreeNode C=new TreeNode('C');
         TreeNode D=new TreeNode('D');
-        TreeNode E=new TreeNode('E');
-        TreeNode F=new TreeNode('F');
-        TreeNode G=new TreeNode('G');
-       // TreeNode H=new TreeNode('H');
-        A.left=B;
-        A.right=C;
-        B.left=D;
-        B.right=E;
-        //E.right=H;
-        C.left=F;
-        C.right=G;
+//        TreeNode E=new TreeNode('E');
+//        TreeNode F=new TreeNode('F');
+//        TreeNode G=new TreeNode('G');
+//        TreeNode H=new TreeNode('H');
+        A.right=B;
+       // A.right=C;
+        B.right=C;
+        C.right=D;
+//        E.right=H;
+//        C.left=F;
+//        C.right=G;
         return A;
     }
  
@@ -217,5 +217,19 @@ public class BinaryTree {
             }
         }
         return true;
+    }
+
+    public int rangeSumBST(TreeNode root, int low, int high) {
+        if(root==null){
+            return 0;
+        }
+        if(root.val>high){
+            return rangeSumBST(root.left,low,high);
+        }
+
+        if(root.val<low){
+            return rangeSumBST(root.right,low,high);
+        }
+        return root.val+rangeSumBST(root.left,low,high)+rangeSumBST(root.right,low,high);
     }
 }
