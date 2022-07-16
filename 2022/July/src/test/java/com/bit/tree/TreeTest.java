@@ -39,5 +39,9 @@ public class TreeTest {
         System.out.println();
         System.out.print("判断是否为完全二叉树:");
         System.out.println(bt.isCompleteTree(root));
+        System.out.print("二叉树的镜像:");
+        bt.mirrorTree(root);
+        System.out.print("前序遍历:");
+        bt.preOrder(root);
     }
 }

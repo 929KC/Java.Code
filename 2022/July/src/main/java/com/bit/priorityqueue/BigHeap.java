@@ -42,14 +42,14 @@ public class BigHeap {
     public void shiftDown(int parent ,int len){
         int child=2*parent+1;//左孩子
         while(child<len){//保证有左孩子
-            if(child+1<this.userSized&&elem[child]<elem[child+1]){//有右孩子
+            if(child+1<len&&elem[child]<elem[child+1]){//有右孩子
                 child++;
             }
             if(elem[child]>elem[parent]){
                 swap(elem,child,parent);
                 //因为是从向下调整,调整后只是当前的树为最大堆,还需向下继续调整,直至所有的树都满足最大堆
                 parent= child;
-                child=child*2+1;
+                child=parent*2+1;
             }else{
                 break;
             }
@@ -118,5 +118,14 @@ public class BigHeap {
 
     public boolean isFull(){
         return this.userSized==elem.length;
+    }
+
+    public  void heapSort(){
+        int end=this.userSized-1;
+        while(end>0){
+            swap(elem,0,end);
+            shiftDown(0,end);
+            end--;
+        }
     }
 }

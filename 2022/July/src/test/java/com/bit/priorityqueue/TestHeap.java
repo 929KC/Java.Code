@@ -22,5 +22,8 @@ public class TestHeap {
         System.out.println("大根堆:"+Arrays.toString(bh.elem));
         bh.poll();
         System.out.println("出队后的大根堆:"+Arrays.toString(bh.elem));
+        System.out.print("堆排序:");
+        bh.heapSort();
+        System.out.println(Arrays.toString(bh.elem));
     }
 }
