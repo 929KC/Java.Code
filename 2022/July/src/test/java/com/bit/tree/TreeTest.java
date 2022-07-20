@@ -1,11 +1,7 @@
 package com.bit.tree;
 
 import org.junit.Test;
-
-import java.util.Comparator;
-import java.util.PriorityQueue;
-
-
+import com.bit.tree.BinarySearchTree.*;
 /**
  * truth:talk is cheap, show me the code
  *
@@ -47,4 +43,15 @@ public class TreeTest {
         System.out.print("前序遍历:");
         bt.preOrder(root);
     }
+
+    @Test
+    public void testBinarySearchTree(){
+        BinarySearchTree bs=new BinarySearchTree();
+        int[] array = {80,30,48,60,90,56};
+        for (int i = 0; i < array.length; i++) {
+          bs.insert(array[i]);
+        }
+       bs.inOrder(bs.root);
+    }
+
 }
