@@ -1,7 +1,5 @@
 package com.bit.arraylist;
 
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * truth:talk is cheap, show me the code

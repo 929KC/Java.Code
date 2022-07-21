@@ -3,7 +3,6 @@ package com.bit.sort;
 import org.junit.Test;
 import java.util.Arrays;
 import java.util.Random;
-
 import static com.bit.sort.SortUtils.*;
 
 /**
@@ -37,7 +36,7 @@ public class SortTest {
     @Test
     public void testShellSort(){
         int [] array=new int[]{1,5,4,6,0,3};
-        for(int i=0;i<array.length;i++){
+        for(int i=array.length;i>=0;i--){
             shellSort(array,i/2);
         }
         System.out.println(Arrays.toString(array));
@@ -102,4 +101,22 @@ public class SortTest {
         System.out.println(Arrays.toString(array));
     }
 
+    @Test
+    public void testMerger(){
+        int [] array=new int[]{18,3,10,2,7,45,47,89,20};
+        mergerSort(array);
+        System.out.println(Arrays.toString(array));
+    }
+    @Test
+    public void testMergerSort2(){
+        int [] array=new int[]{18,3,10,2,7,45,47,89,20};
+        mergerSort2(array);
+        System.out.println(Arrays.toString(array));
+    }
+    @Test
+    public void testBucketSort(){
+        int [] array=new int[]{18,3,10,2,7,45,47,89,20};
+        bucketSort(array);
+        System.out.println(Arrays.toString(array));
+    }
 }

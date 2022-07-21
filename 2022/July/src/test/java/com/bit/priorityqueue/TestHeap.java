@@ -20,6 +20,7 @@ public class TestHeap {
         bh.createHeap();
         bh.offer(99);
         System.out.println("大根堆:"+Arrays.toString(bh.elem));
+        System.out.println("堆顶元素:"+bh.peekHeap());
         bh.poll();
         System.out.println("出队后的大根堆:"+Arrays.toString(bh.elem));
         System.out.print("堆排序:");

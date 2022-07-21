@@ -51,6 +51,8 @@ public class TreeTest {
         for (int i = 0; i < array.length; i++) {
           bs.insert(array[i]);
         }
+        bs.remove(80);
+        bs.remove(56);
        bs.inOrder(bs.root);
     }
 

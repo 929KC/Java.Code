@@ -128,4 +128,15 @@ public class BigHeap {
             end--;
         }
     }
+
+    /**
+     * 获取堆顶元素
+     * @return
+     */
+    public int peekHeap() {
+      if (!isEmpty()){
+          return elem[0];
+      }
+        return -1;
+    }
 }
