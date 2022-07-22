@@ -35,13 +35,7 @@ public class SortUtils {
        }
     }
 
-    /**
-     * 希尔排序
-     * 时间复杂度:最好o(n)
-     * 空间复杂度:o(1)
-     * 稳定性:稳定
-     */
-    public static void shellSort(int[] array, int gap) {
+    public static void shell(int[] array, int gap) {
         for (int i = gap; i < array.length; i++) {
             int tmp = array[i];
             int j = i - gap;
@@ -58,28 +52,24 @@ public class SortUtils {
     }
 
     /**
-     * 冒泡排序
-     * 时间复杂度:
-     * 空间复杂度:
-     * 稳定性:
-     *
+     * 希尔排序的时间复杂度：
+     * O(N^1.3 - N^1.5)
+     * 空间复杂度：O(1)
+     * 稳定性：不稳定
      * @param array
      */
-    public static void bubbleSort(int[] array) {
-        for (int i = 0; i < array.length - 1; i++) {
-            boolean flag = false;
-            for (int j = 0; j < array.length - 1 - i; j++) {
-                if (array[j] > array[j + 1]) {
-                    swap(array, j, j + 1);
-                    flag = true;
-                }
-            }
-            if (!flag) {
-                return;
-            }
+    public static void shellSort(int[] array) {
+        int gap = array.length;
+        while (gap > 1) {
+            shell(array,gap);
+            gap /= 2;
+        }
+        //shell(array,1);
+       int[] drr = {5,2,1};
+        for (int i = 0; i < drr.length; i++) {
+            shell(array,drr[i]);
         }
     }
-
     /**
      * 交换函数
      *
@@ -101,6 +91,7 @@ public class SortUtils {
      * 稳定性:不稳定
      */
     public static void selectOneSort(int[] array) {
+        int count = 0;
        for (int i=0;i<array.length;i++){
            int midIndex = i;
            for(int j = i+1;j<array.length;j++) {
@@ -150,6 +141,7 @@ public class SortUtils {
      * 稳定性:不稳定性
      */
     public static void heapSort(int[] array) {
+        createHeap(array);
         int end = array.length - 1;
         while (end >= 0) {
             swap(array, 0, end);
@@ -176,6 +168,28 @@ public class SortUtils {
                 child = 2 * parent + 1;
             } else {
                 break;
+            }
+        }
+    }
+    /**
+     * 冒泡排序
+     * 时间复杂度:
+     * 空间复杂度:
+     * 稳定性:
+     *
+     * @param array
+     */
+    public static void bubbleSort(int[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
+            boolean flag = false;
+            for (int j = 0; j < array.length - 1 - i; j++) {
+                if (array[j] > array[j + 1]) {
+                    swap(array, j, j + 1);
+                    flag = true;
+                }
+            }
+            if (!flag) {
+                return;
             }
         }
     }
@@ -207,7 +221,6 @@ public class SortUtils {
             array[j + 1] = tmp;
         }
     }
-
     public static void quick(int[] array, int left, int right) {
         //可能没有左树
         if (left >= right) {
@@ -356,6 +369,10 @@ public class SortUtils {
         }
     }
 
+    /**
+     * 归并排序
+     * @param array
+     */
     public static void mergerSort(int [] array) {
         mergerSortDfs(array,0,array.length-1);
     }
@@ -425,7 +442,38 @@ public class SortUtils {
             gap*=2;
         }
     }
-
+    /**
+     * 计数排序
+     *
+     * @param array
+     */
+    public static void countSort(int[] array) {
+        int maxVal = array[0];
+        int minVal = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < minVal) {
+                minVal = array[i];
+            }
+            if (array[i] > maxVal) {
+                maxVal = array[i];
+            }
+        }
+        int len = maxVal - minVal + 1;
+        int[] count = new int[len];
+        //对源数组中的元素进行统计
+        for (int i = 0; i < array.length; i++) {
+            int val = array[i];
+            count[val - minVal]++;
+        }
+        //将排序好的元素依次拷贝到原数组
+        int index = 0;
+        for (int i = 0; i < count.length; i++) {
+            while (count[i] != 0) {
+                array[index++] = minVal + i;//最小值加下标即为元素
+                count[i]--;
+            }
+        }
+    }
     /**
      * 基数排序
      * @param array
@@ -518,39 +566,6 @@ public class SortUtils {
         for(int i = 0; i < bucketArr.size(); i++){
             for(int j = 0; j < bucketArr.get(i).size(); j++){
                 arr[index++] = bucketArr.get(i).get(j);
-            }
-        }
-    }
-
-    /**
-     * 计数排序
-     *
-     * @param array
-     */
-    public static void countSort(int[] array) {
-        int maxVal = array[0];
-        int minVal = array[0];
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] < minVal) {
-                minVal = array[i];
-            }
-            if (array[i] > maxVal) {
-                maxVal = array[i];
-            }
-        }
-        int len = maxVal - minVal + 1;
-        int[] count = new int[len];
-        //对源数组中的元素进行统计
-        for (int i = 0; i < array.length; i++) {
-            int val = array[i];
-            count[val - minVal]++;
-        }
-        //将排序好的元素依次拷贝到原数组
-        int index = 0;
-        for (int i = 0; i < count.length; i++) {
-            while (count[i] != 0) {
-                array[index++] = minVal + i;//最小值加下标即为元素
-                count[i]--;
             }
         }
     }

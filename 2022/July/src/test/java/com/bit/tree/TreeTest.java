@@ -1,7 +1,6 @@
 package com.bit.tree;
 
 import org.junit.Test;
-import com.bit.tree.BinarySearchTree.*;
 /**
  * truth:talk is cheap, show me the code
  *
@@ -53,7 +52,7 @@ public class TreeTest {
         }
         bs.remove(80);
         bs.remove(56);
-       bs.inOrder(bs.root);
+        bs.inOrder(bs.root);
     }
 
 }

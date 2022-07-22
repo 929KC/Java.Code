@@ -1,5 +1,7 @@
 package com;
 
+import java.util.Locale;
+
 /**
  * truth:talk is cheap, show me the code
  *
@@ -11,5 +13,8 @@ package com;
 public class test {
     public static void main(String[] args) {
         System.out.println("测试");
+        String str = "hfjksa";
+
+        System.out.println(str.toUpperCase());
     }
 }

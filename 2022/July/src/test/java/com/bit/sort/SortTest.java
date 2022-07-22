@@ -18,50 +18,48 @@ public class SortTest {
     public void testInsertSort(){
         int [] array = {2,4,6,8,3,9,10,15,17};
         insertSort(array);
-        System.out.println(Arrays.toString(array));
-    }
-    @Test
-    public void testBulletSort(){
-        int [] array = {12,4,100,8,3,9,10,15,17};
-        bubbleSort(array);
-        System.out.println(Arrays.toString(array));
-    }
-    @Test
-    public void testCountSort(){
-        int [] array=new int[]{1,5,4,6,0,3};
-        countSort(array);
-        System.out.println(Arrays.toString(array));
+        System.out.println("插入排序:"+Arrays.toString(array));
     }
 
     @Test
     public void testShellSort(){
         int [] array=new int[]{1,5,4,6,0,3};
-        for(int i=array.length;i>=0;i--){
-            shellSort(array,i/2);
-        }
-        System.out.println(Arrays.toString(array));
+        shellSort(array);
+        System.out.println("希尔排序:"+Arrays.toString(array));
     }
+
 
     @Test
     public void testSelectSort1(){
-        int [] array=new int[]{1,5,4,6,0,3};
+        int [] array=new int[100];
+        randomNum(array);
         selectOneSort(array);
-        System.out.println(Arrays.toString(array));
+        System.out.println("选择排序1:"+Arrays.toString(array));
     }
     @Test
     public void testSelectSort2(){
         int [] array=new int[]{18,3,10,2,7};
         selectTwoSort(array);
-        System.out.println(Arrays.toString(array));
+        System.out.println("选择排序2:"+Arrays.toString(array));
     }
-
+    @Test
+    public void testHeapSort(){
+        int [] array=new int[]{18,3,10,2,7,45,47,89,20,100,45,78,320};
+        heapSort(array);
+        System.out.println("堆排序:"+Arrays.toString(array));
+    }
     @Test
     public void testQuickSort(){
         int [] array=new int[]{18,3,10,2,7,45,47,89,20};
         quickSort(array);
-        System.out.println(Arrays.toString(array));
+        System.out.println("快速排序:"+Arrays.toString(array));
     }
-
+    @Test
+    public void testBulletSort(){
+        int [] array = {12,4,100,8,3,9,10,15,17};
+        bubbleSort(array);
+        System.out.println("冒泡排序:"+Arrays.toString(array));
+    }
     @Test
     public void testHoleQuickSort(){
         int [] array=new int[]{18,3,10,2,7,45,47,89,20};
@@ -81,7 +79,7 @@ public class SortTest {
     private static void randomNum(int [] array){
         Random rand = new Random();
         for(int i=0;i<array.length;i++){
-            array[i] = rand.nextInt(10_00000);
+            array[i] = rand.nextInt(100);
         }
     }
 
@@ -105,13 +103,20 @@ public class SortTest {
     public void testMerger(){
         int [] array=new int[]{18,3,10,2,7,45,47,89,20};
         mergerSort(array);
-        System.out.println(Arrays.toString(array));
+        System.out.println("归并排序:"+Arrays.toString(array));
     }
     @Test
     public void testMergerSort2(){
         int [] array=new int[]{18,3,10,2,7,45,47,89,20};
         mergerSort2(array);
-        System.out.println(Arrays.toString(array));
+        System.out.println("递归版归并排序:"+Arrays.toString(array));
+    }
+
+    @Test
+    public void testCountSort(){
+        int [] array=new int[]{1,5,4,6,0,3};
+        countSort(array);
+        System.out.println("计数排序:"+Arrays.toString(array));
     }
     @Test
     public void testBucketSort(){

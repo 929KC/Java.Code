@@ -18,13 +18,17 @@ public class TestHeap {
         int [] array={27,15,19,18,28,34,65,49,25,37};
         bh.init(array);
         bh.createHeap();
-        bh.offer(99);
-        System.out.println("大根堆:"+Arrays.toString(bh.elem));
-        System.out.println("堆顶元素:"+bh.peekHeap());
-        bh.poll();
-        System.out.println("出队后的大根堆:"+Arrays.toString(bh.elem));
-        System.out.print("堆排序:");
+//        bh.heapSort();
+//        System.out.println("排序后:"+Arrays.toString(bh.elem));
+//        bh.offer(99);
+//        System.out.println("大根堆:"+Arrays.toString(bh.elem));
+//        System.out.println("堆顶元素:"+bh.peekHeap());
+//        bh.poll();
+//        System.out.println("出队后的大根堆:"+Arrays.toString(bh.elem));
         bh.heapSort();
-        System.out.println(Arrays.toString(bh.elem));
+        System.out.println("排序后:"+Arrays.toString(bh.elem));
+        bh.offer(100);
+        bh.heapSort();
+        System.out.println("排序后:"+Arrays.toString(bh.elem));
     }
 }
