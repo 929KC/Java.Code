@@ -4,6 +4,8 @@ import org.junit.Test;
 
 import java.util.*;
 
+import static com.bit.lc.Solution2.containsDuplicate;
+
 /**
  * truth:talk is cheap, show me the code
  *
@@ -62,4 +64,11 @@ public class LcTest {
         list.add(0,2);
         System.out.println(list);
     }
+
+    @Test
+    public  void testContainsDuplicate(){
+        int [] nums = new int[]{1,2,3,1};
+        containsDuplicate(nums);
+    }
+
 }
