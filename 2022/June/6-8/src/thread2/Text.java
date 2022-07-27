@@ -1,5 +1,8 @@
 package thread2;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * truth:talk is cheap, show me the code
  *
@@ -17,5 +20,6 @@ public class Text {
         Thread tcer = new Thread(cer);
         tper.start();
         tcer.start();
+
     }
 }
