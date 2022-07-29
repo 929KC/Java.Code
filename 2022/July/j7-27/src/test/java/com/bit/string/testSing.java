@@ -2,6 +2,8 @@ package com.bit.string;
 
 import org.junit.Test;
 
+import java.io.Console;
+
 public class testSing {
     @Test
     public  void testString(){
@@ -73,4 +75,44 @@ public class testSing {
       System.out.println(s3==s4);
     }
 
+    @Test
+    public void testString7(){
+        char [] arr = new char[]{'a','b','c'};
+        String s1 = new String(arr);
+      //  s1.intern();
+        String s2 = "abc";
+        System.out.println(s1==s2);
+    }
+
+
+
+    @Test
+    public void testString8(){
+        long start = System.currentTimeMillis();
+        String s = "";
+        for (int i = 0;i<10_0000;i++) {
+            s+= i;
+        }
+        long end = System.currentTimeMillis();
+        System.out.println(end-start);
+
+    }
+
+    @Test
+    public void testString9(){
+        long start = System.currentTimeMillis();
+        StringBuffer s = new StringBuffer("");
+        for (int i = 0;i<10_0000;i++) {
+           s.append(i);
+        }
+        long end = System.currentTimeMillis();
+        System.out.println(end-start);
+    }
+
+    @Test
+    public   void testStringBuilder(){
+        StringBuilder s= new StringBuilder("hello world");
+        System.out.println(s.reverse().toString());
+
+    }
 }
